@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.isoftstone.guodian.demo.dao.EmpDao">
+
+     <resultMap id="res_map" type="java.util.Map">
+            <result  property="e_no" column="empno" javaType="java.lang.String"></result>
+            <result  property="e_name" column="ename"  javaType="java.lang.String"></result>
+           <result property="e_des" column="des"  javaType="java.lang.String"></result>
+           <result property="e_dname" column="dname"  javaType="java.lang.String"></result>
+
+     </resultMap>
+     <insert id="saveEntity" parameterType="com.isoftstone.guodian.demo.entity.EmpEntity">
+             insert into emp (empno,ename,job,sal,hiredate,dname)
+              values(empno,#{ename,jdbcType=VARCHAR},#{job,jdbcType=VARCHAR},
+              #{sal,jdbcType=DECIMAL},#{hiredate,jdbcType=DATE},#{dname,jdbcType=VARCHAR})
+     </insert>
+    <delete id="deleteEntity" parameterType="string">
+                delete from emp where emp.empno=#{ab}
+    </delete>
+    <update id="updateEntity" parameterType="com.isoftstone.guodian.demo.entity.EmpEntity">
+
+        update emp set ename=#{ename},job=#{job},sal=#{sal},
+                hiredate=#{hiredate},dname=#{dname} where emp.empno=#{empno}
+
+    </update>
+    <select id="selectALL"  parameterType="String"  resultType="com.isoftstone.guodian.demo.entity.EmpEntity">
+
+         select empno,ename,job,sal,hiredate,dname from emp where 1=1
+         <if test="sqlWhere!=null">
+             #{sqlWhere}
+         </if>
+
+    </select>
+    <select id="selectTotal" parameterType="com.isoftstone.guodian.demo.entity.EmpEntity" resultType="int">
+              select count(*) from emp where 1=1
+        <if test="whereSql!=null" >
+            ${whereSql }
+        </if>
+    </select>
+    <select id="selectForPage" parameterType="com.isoftstone.guodian.demo.entity.EmpEntity" resultType="com.isoftstone.guodian.demo.entity.EmpEntity">
+        select empno,ename,job,sal,hiredate,dname from emp where 1=1
+        <if test="whereSql!=null">
+            ${whereSql }
+        </if>
+        <if test="pageUtils!=null">
+            limit #{pageUtils.offset} ,#{pageUtils.pageSize}
+        </if>
+
+    </select>
+
+    <select id="selectEmpDept" parameterType="com.isoftstone.guodian.demo.entity.EmpEntity" resultMap="res_map">
+        select empno,ename,emp.dname ,des from emp,dept
+        where  emp.dname=dept.dname
+        <if test="whereSql!=null">
+            ${whereSql}
+        </if>
+
+    </select>
+
+
+</mapper>
+  
