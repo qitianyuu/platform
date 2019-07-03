@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 /**
- * Created by issuser on 2019/7/1.
+ * Created by 123 on 2019/7/1.
  */
 @Controller  //控制层闯将bean，即让spring实例化这个 类
 public class EmpControl {
