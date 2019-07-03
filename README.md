@@ -1,3 +1,15 @@
-# platform
+### 国电煤炭交易平台
 
-daijiankun
+
+
+## Contributor
+
+齐天雨
+
+雷笑天
+
+张泽坤
+
+吴长棋
+
+代健坤
