@@ -24,7 +24,7 @@ public class EmpControl {
     //加载首页main.jsp
     @RequestMapping("/")   //定义页面访问的url
     public String loadMainPage(){
-          //处理业务
+        //处理业务
         System.out.println("查询。。。。。");
         return "/main.jsp";   //默认服务器端跳转（一般我们跳转页面） “redirect:/sdfdf” 客户端跳转
 
@@ -49,4 +49,5 @@ public class EmpControl {
         }
         return "/demo/demo_select.jsp";
     }
+
 }

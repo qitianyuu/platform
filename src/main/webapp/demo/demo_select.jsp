@@ -12,8 +12,13 @@
 <style>
 	   body{font-family:"微软雅黑";padding-top:10px;margin:0px;}
 	</style>
-	<script>
-	  
+	<script >
+	  function addPtOrgan(obj) {
+          var url= $(obj).attr("url");
+          $("#tabTitle").html($(obj).html());
+
+
+      }
 	    
 
 	</script>
@@ -29,9 +34,9 @@
  	<input type="hidden" value="<%=basePath %>" id="path">
 			<!--toolsbar-->
 			<div class="panel panel-default">
-	        <div class="panel-body">
+	        	<div class="panel-body">
 
-			<form class="form-inline" id="searchform" method="post">
+				<form class="form-inline" id="searchform" method="post">
 			   
 				  <div class="form-group">
 					<label for="organName">名称</label>
@@ -55,7 +60,7 @@
 					<input type="text" onFocus="WdatePicker()" value="${modDateMax}"  class="Wdate form-control input-sm" name="modDateMax"  id="modDateMax" placeholder="截止日期">
 				  </div>
 					<button type="button" class="btn btn-primary" onclick="mainPage()">查询</button>
-					<button type="button" class="btn btn-primary" onclick="addPtOrgan()">添加</button>
+					<button type="button" class="btn btn-primary" >添加</button>
 		   </form>
 		   </div>
 		   </div>

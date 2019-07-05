@@ -100,7 +100,7 @@
 						<li><a href="javascript:void(0)"   >待办中心</a></li>
 					   <li><a href="javascript:void(0)"   >采购审批管理</a></li>
 					   <li><a href="javascript:void(0)"   >采购执行管理</a></li>
-					   <li><a href="javascript:void(0)"   >长协交易创建</a></li>
+					   <li><a href="javascript:void(0)"   onclick="setURL(this)" url="<%=basePath%>treaty/treatycontrol">长协交易创建</a></li>
 					</ul>
 				</li>
 				<li>

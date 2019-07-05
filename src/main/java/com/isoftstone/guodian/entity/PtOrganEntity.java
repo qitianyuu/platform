@@ -4,28 +4,33 @@ import com.isoftstone.guodian.framework.baseEntity.BaseEntity;
 
 import java.util.Date;
 
+/**
+ * @Author qi
+ * @Version 1.0
+ * 组织机构表
+ */
 public class PtOrganEntity extends BaseEntity {
     private String organUuid;
 
-    private String organCode;
+    private String organCode;//组织编码
 
-    private String organName;
+    private String organName;//组织名称
 
-    private String organType;
+    private String organType;//组织类型（1集团、2分公司、3电厂）
 
-    private String inUse;
+    private String inUse;//是否使用
 
-    private String parentUuid;
+    private String parentUuid;//父id
 
-    private String status;
+    private String status;//是否删除
 
-    private String modifierid;
+    private String modifierid;//创建人id
 
-    private Date modtime;
+    private Date modtime;//创建时间
 
-    private String description;
+    private String description;//描述
 
-    private String accountCode;
+    private String accountCode;//资金账户code
 
     public String getOrganUuid() {
         return organUuid;

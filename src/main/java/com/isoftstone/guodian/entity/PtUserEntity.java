@@ -4,54 +4,59 @@ import com.isoftstone.guodian.framework.baseEntity.BaseEntity;
 
 import java.util.Date;
 
+/**
+ * @Author qi
+ * @Version 1.0
+ * 用户表
+ */
 public class PtUserEntity extends BaseEntity {
     private String userUuid;
 
     private String id;
 
-    private String username;
+    private String username;//用户名
 
-    private String password;
+    private String password;//密码
 
-    private String email;
+    private String email;//邮件
 
-    private String mobile;
+    private String mobile;//电话
 
-    private Short enabled;
+    private Short enabled;//是否有效
 
-    private Short accountNonExpired;
+    private Short accountNonExpired;//账号是否过期
 
-    private Short credentialsNonExpired;
+    private Short credentialsNonExpired;//凭证是否过期
 
-    private Short accountNonLocked;
+    private Short accountNonLocked;//账号是否锁定
 
-    private String organUuid;
+    private String organUuid;//组织机构id
 
-    private String niceName;
+    private String niceName;//真实姓名
 
-    private Short isAdmin;
+    private Short isAdmin;//是否管理员
 
     private Short maximumsessions;
 
-    private Date registerdate;
+    private Date registerdate;//注册日期
 
-    private Date lastlogintime;
+    private Date lastlogintime;//上次登录时间
 
-    private String pwdque;
+    private String pwdque;//密保问题
 
-    private String pwdans;
+    private String pwdans;//密保答案
 
-    private String remark;
+    private String remark;//备注
 
-    private String depid;
+    private String depid;//部门id
 
-    private String status;
+    private String status;//是否删除
 
-    private Date modtime;
+    private Date modtime;//修改时间
 
-    private String modifierid;
+    private String modifierid;//修改人id
 
-    private Short isSum;
+    private Short isSum;//是否阳光用户
 
     public String getUserUuid() {
         return userUuid;
