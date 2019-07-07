@@ -43,7 +43,12 @@ public class EmpControl {
             page.setTotal(empService.selectTotal(null));
             entity.setPageUtils(page);
             List<EmpEntity> list = empService.selectForPage(entity);
-               model.addAttribute("rows",list);
+            model.addAttribute("rows",list);
+
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println("###########" + list.get(i));
+            }
+
         }catch (Exception e){
             e.printStackTrace();
         }
